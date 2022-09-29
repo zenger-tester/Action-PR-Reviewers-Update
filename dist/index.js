@@ -9682,7 +9682,6 @@ function main() {
             pull_number: prNumber,
             reviewers: reviewerList,
         };
-        core.info(JSON.stringify(params));
         octokit.rest.pulls.requestReviewers(params);
     } catch (error) {
         core.setFailed(error.message);
