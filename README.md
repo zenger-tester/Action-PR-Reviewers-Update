@@ -1,0 +1,1 @@
+This action adds the entered reviewers to a PR. It should run on pull_request opened.

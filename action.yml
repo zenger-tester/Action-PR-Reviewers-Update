@@ -1,0 +1,12 @@
+name: "Add Reviewer"
+description: "Adds reviewer(s) to a PR. Run on pull_request opened."
+branding:
+  icon: "user-plus"
+  color: "gray-dark"
+inputs:
+  reviewers:
+    description: "Add list, pipe(|) separated."
+    required: true
+runs:
+  using: "node16"
+  main: "dist/index.js"
