@@ -9675,14 +9675,14 @@ function main() {
         const token = process.env["GITHUB_TOKEN"];
         const octokit = new github.getOctokit(token);
         const context = github.context;
-
         const prNumber = context.payload.pull_request.number;
+
         const params = {
             ...context.repo,
             pull_number: prNumber,
-            reviewers: reviewerList,
+            team_reviewers: reviewerList,
         };
-        core.info(JSON.stringify(params));
+        
         octokit.rest.pulls.requestReviewers(params);
     } catch (error) {
         core.setFailed(error.message);
