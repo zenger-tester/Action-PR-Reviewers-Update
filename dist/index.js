@@ -9678,11 +9678,7 @@ function main() {
         const reviewerList = reviewers.split("|");
         const teamList = reviewer_teams.split("|");
         
-        console.log(PAT);
-        console.log(PAT == "");
-        console.log(teamList);
-
-        const octokit = new github.getOctokit(PAT == "" ? token : PAT); //prefer PAT
+        const octokit = new github.getOctokit(PAT); //prefer PAT
 
         const context = github.context;
         const prNumber = context.payload.pull_request.number;
