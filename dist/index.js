@@ -9674,14 +9674,14 @@ function main() {
         const PAT = process.env["PAT"];
         
         const reviewers = core.getInput("reviewers");
-        const reviewer_teams = core.getInput("reviewer-teams");
+        const reviewer_teams = core.getInput("reviewer_teams");
         const reviewerList = reviewers.split("|");
         const teamList = reviewer_teams.split("|");
         
         console.log(PAT);
         console.log(PAT == "");
         console.log(teamList);
-        
+
         const octokit = new github.getOctokit(PAT == "" ? token : PAT); //prefer PAT
 
         const context = github.context;
