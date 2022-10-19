@@ -7,7 +7,7 @@ inputs:
   reviewers:
     description: "Add list, pipe(|) separated."
     required: false
-  reviewer-teams:
+  reviewer_teams:
     description: "Teams to add."
     required: false
 runs:
