@@ -6,7 +6,10 @@ branding:
 inputs:
   reviewers:
     description: "Add list, pipe(|) separated."
-    required: true
+    required: false
+  reviewer-teams:
+    description: "Teams to add."
+    required: false
 runs:
   using: "node16"
   main: "dist/index.js"
