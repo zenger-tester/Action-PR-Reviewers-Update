@@ -9,6 +9,9 @@ on:
       reviewer_teams:
         required: false
         type: string
+      path:
+        required: true
+        type: string
     secrets:
       token:
         description: "GITHUB_TOKEN to be used."
@@ -25,7 +28,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
         with:
-          path: ${{ github.repository }}
+          path: ${{ inputs.path }}
       - name: Add reviewers step
         uses: ./
         env:
