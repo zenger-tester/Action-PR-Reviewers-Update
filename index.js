@@ -16,7 +16,9 @@ function main() {
         const teamList = reviewer_teams.split("|");
         
         const addsTeams = teamList.length > 0;
-        const octokit = new github.getOctokit(addsTeams ? PAT : token);
+        console.log(teamList.length);
+        console.log(addsTeams);
+        const octokit = new github.getOctokit(token);
 
         const context = github.context;
         const prNumber = context.payload.pull_request.number;
